@@ -15,7 +15,7 @@ app.post("/register",async(req,res)=>
 
          if(exist)
          {
-            res.send("User Already Registered")
+            res.send({message:"User Already Registered",status:0})
          }
          else
          {
@@ -43,7 +43,7 @@ app.post("/register",async(req,res)=>
     }
     catch(e)
     {
-        res.send(e)
+        res.send({message:e.message,status:0})
     }
 })
 
